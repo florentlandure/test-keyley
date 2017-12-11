@@ -8,6 +8,8 @@ import { AppComponent } from './app.component';
 import { ProductsListComponent } from './components/products/products.component';
 import { ProductComponent } from './components/product/product.component';
 
+import { ProductsDataService } from './services/products/products-data.service';
+
 
 @NgModule({
   declarations: [
@@ -20,7 +22,7 @@ import { ProductComponent } from './components/product/product.component';
     AppRoutingModule,
     NgMaterialModule
   ],
-  providers: [],
+  providers: [ProductsDataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
