@@ -20,7 +20,7 @@
       </mat-form-field>
     </div>
     <div class="search">
-
+      <input type="text" placeholder="Search products" (keyup)="searchProduct($event.target.value)">
     </div>
   </div>
   <table *ngIf="products" class="products-list">

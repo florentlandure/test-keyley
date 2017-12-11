@@ -28,4 +28,14 @@ export class ProductsListComponent implements OnInit {
         .filter(product => !!product.categories.find(category => category === id));
     }
   }
+
+  searchProduct(userInput: string): void {
+    if (userInput.length > 0) {
+      userInput = userInput.toLowerCase();
+      this.products = this.productService.getProductList()
+        .filter(product => product.description.toLowerCase().indexOf(userInput) > -1);
+    } else {
+      this.products = this.productService.getProductList();
+    }
+  }
 }
