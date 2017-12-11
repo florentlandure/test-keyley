@@ -7,6 +7,7 @@ import { AppRoutingModule } from './modules/router/app-routing.module';
 import { AppComponent } from './app.component';
 import { ProductsListComponent } from './components/products/products.component';
 import { ProductComponent } from './components/product/product.component';
+import { ProductCardComponent } from './components/product-card/product-card.component';
 
 import { ProductsDataService } from './services/products/products-data.service';
 
@@ -15,7 +16,8 @@ import { ProductsDataService } from './services/products/products-data.service';
   declarations: [
     AppComponent,
     ProductsListComponent,
-    ProductComponent
+    ProductComponent,
+    ProductCardComponent
   ],
   imports: [
     BrowserModule,
