@@ -25,7 +25,7 @@ export class ProductsDataService {
 
 }
 
-const PRODUCTS = [
+const PRODUCTS: Product[] = [
   {
     id: 1,
     name: 'Apple MacBook',
@@ -35,7 +35,8 @@ const PRODUCTS = [
     images: [
       'https://images.apple.com/v/macbook/g/images/specs/finish_top_spacegray_medium_2x.jpg',
       'https://images.apple.com/v/macbook/g/images/specs/finish_top_rosegold_medium_2x.jpg'
-    ]
+    ],
+    description: 'Macbook description'
   },
   {
     id: 2,
@@ -44,10 +45,11 @@ const PRODUCTS = [
     price: 1799,
     categories: [1, 3],
     images: [
+      'https://images.apple.com/v/macbook-pro/n/images/specs/touchbar13_mbp_medium_2x.jpg',
       'https://images.apple.com/v/macbook/g/images/specs/finish_top_spacegray_medium_2x.jpg',
-      'https://images.apple.com/v/macbook/g/images/specs/finish_top_rosegold_medium_2x.jpg',
-      'https://images.apple.com/v/macbook-pro/n/images/specs/touchbar13_mbp_medium_2x.jpg'
-    ]
+      'https://images.apple.com/v/macbook/g/images/specs/finish_top_rosegold_medium_2x.jpg'
+    ],
+    description: 'Macbook Pro description'
   },
   {
     id: 3,
@@ -57,7 +59,8 @@ const PRODUCTS = [
     categories: [1],
     images: [
       'https://images.apple.com/v/macbook/g/images/specs/finish_top_spacegray_medium_2x.jpg',
-    ]
+    ],
+    description: 'Macbook Air description'
   },
   {
     id: 4,
@@ -66,12 +69,13 @@ const PRODUCTS = [
     price: 1699,
     categories: [2],
     images: [
-      'https://images.apple.com/v/macbook/g/images/specs/finish_top_spacegray_medium_2x.jpg',
-    ]
+      'https://support.apple.com/library/content/dam/edam/applecare/images/en_US/mac/2017-imac-21-sierra.jpg',
+    ],
+    description: 'iMac description'
   },
 ];
 
-const CATEGORIES = [
+const CATEGORIES: Category[] = [
   {
     id: 1,
     title: 'Laptop'

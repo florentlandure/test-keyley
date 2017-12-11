@@ -5,4 +5,5 @@ export default interface Product {
   price: number;
   categories: number[];
   images: string[];
+  description: string;
 }

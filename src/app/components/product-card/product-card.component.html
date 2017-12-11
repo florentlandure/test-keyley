@@ -1,5 +1,30 @@
-<mat-card *ngIf="product">
-  <mat-card-title>
-      {{ product.name }}
+<mat-card class="product-card" *ngIf="product">
+  <mat-card-title class="card-title">
+    <img class="card-image" [src]="product.images[0]">
   </mat-card-title>
+
+  <mat-card-subtitle>
+    <h1>{{ product.description }}</h1>
+    <h2>
+      <ng-container *ngFor="let category of categories; let first = first">
+        <span *ngIf="!first">,</span>
+        {{ category.title }}
+      </ng-container>
+    </h2>
+  </mat-card-subtitle>
+
+  <div class="card-content">
+    <mat-card-content>
+      <div>{{ product.price }} €</div>
+      <div>{{ product.weight }} kg</div>
+    </mat-card-content>
+
+    <mat-card-actions>
+      <a class="card-button" routerLink="/product/{{product.id}}">
+        <button mat-button>
+          More info
+        </button>
+      </a>
+    </mat-card-actions>
+  </div>
 </mat-card>

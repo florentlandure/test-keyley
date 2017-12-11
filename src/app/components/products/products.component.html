@@ -1,6 +1,6 @@
 <div>
   <div>Filters</div>
-  <table *ngIf="products">
+  <table *ngIf="products" class="products-list">
     <tbody *ngFor="let product of products">
       <app-product-card
         [product]="product"
