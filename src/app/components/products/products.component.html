@@ -1,22 +1,27 @@
 <div>
-  <div>
-    <h1>Filter by category</h1>
-    <mat-form-field>
-        <mat-select
-        name="filterByTag"
-        (change)="filterByTag($event.value)"
-        placeholder="Select a category">
-        <mat-option
-          [value]="0">
-          All
-        </mat-option>
-        <mat-option
-          *ngFor="let category of categories"
-          [value]="category.id">
-          {{ category.title }}
-        </mat-option>
-      </mat-select>
-    </mat-form-field>
+  <div class="list-header">
+    <div class="filters">
+      <h1>Filter by category</h1>
+      <mat-form-field>
+          <mat-select
+          name="filterByTag"
+          (change)="filterByTag($event.value)"
+          placeholder="Select a category">
+          <mat-option
+            [value]="0">
+            All
+          </mat-option>
+          <mat-option
+            *ngFor="let category of categories"
+            [value]="category.id">
+            {{ category.title }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+    <div class="search">
+
+    </div>
   </div>
   <table *ngIf="products" class="products-list">
     <tbody *ngFor="let product of products">

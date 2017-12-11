@@ -1,3 +1,26 @@
-<p>
-  product works!
-</p>
+<div *ngIf="product" class="product-wrapper">
+  <div class="product-images">
+    <div *ngIf="selectedImage" class="product-image">
+      <img [src]="selectedImage" class="selected-picture">
+    </div>
+    <div class="product-image">
+      <ng-container *ngFor="let image of product.images; let id = index">
+        <img
+          [src]="image"
+          (click)="changeSelectedImage(id)">
+      </ng-container>
+    </div>
+  </div>
+  <div class="product-info">
+    <div>Descrption: {{ product.description }}</div>
+    <div>Weight: {{ product.weight }} kg</div>
+    <div>Price: {{ product.price }} €</div>
+    <div>
+      Categories:
+      <ng-container *ngFor="let category of categories; let first = first">
+        <span *ngIf="!first">,</span>
+        {{ category.title }}
+      </ng-container>
+    </div>
+  </div>
+</div>
